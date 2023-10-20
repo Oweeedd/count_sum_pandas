@@ -11,9 +11,3 @@ def compare(expression):
         return False
 
     return left > right
-
-expression = "2>5"
-
-result = compare(expression)
-
-print(result)
