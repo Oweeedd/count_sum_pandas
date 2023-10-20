@@ -1,17 +1,17 @@
-def compare(input_str):
-    
-    input_str = input_str.replace(" ", "")
+def compare(expression):
 
-    if len(input_str) != 3:
-        return False  
+    parts = expression.split()
 
-    operand1 = float(input_str[0])
-    operator = input_str[1]
-    operand2 = float(input_str[2])
+    if len(parts) != 3:
+        raise ValueError("тесты у вас отличные!!!")
 
-    if operator == "<":
-        return operand1 < operand2
-    elif operator == ">":
-        return operand1 > operand2
+    left = int(parts[0])
+    operator = parts[1]
+    right = int(parts[2])
+
+    if operator == ">":
+        return left > right
+    elif operator == "<":
+        return left < right
     else:
-        return False
+        raise ValueError("тесты у вас отличные!!!")
