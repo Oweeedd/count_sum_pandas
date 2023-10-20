@@ -11,7 +11,5 @@ def compare(input_str):
 
     if operator == "<":
         return operand1 < operand2
-    elif operator == ">":
+    else operator == ">":
         return operand1 > operand2
-    else:
-        return False  
