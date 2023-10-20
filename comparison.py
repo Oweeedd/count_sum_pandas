@@ -1,16 +1,13 @@
 def compare(input_str):
+    
+    input_str = input_str.replace(" ", "")
 
-    parts = input_str.split()
+    if len(input_str) != 3:
+        return False  
 
-    if len(parts) != 3:
-        return False
-
-    try:
-        operand1 = int(parts[0])
-        operator = parts[1]
-        operand2 = int(parts[2])
-    except ValueError:
-        return False
+    operand1 = float(input_str[0])
+    operator = input_str[1]
+    operand2 = float(input_str[2])
 
     if operator == "<":
         return operand1 < operand2
